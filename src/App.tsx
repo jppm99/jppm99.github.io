@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
+import Navbar from './components/common/Navbar';
 import Home from './components/home/Home';
 import CV from './components/cv/CV';
 import Skills from './components/skils/Skills';
@@ -10,13 +11,17 @@ import './App.css';
 
 function App() {
     return (
-        <Router forceRefresh>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/CV" component={CV} />
-            <Route exact path="/Skills" component={Skills} />
-            <Route exact path="/Projects" component={Projects} />
-            <Route exact path="/Contact" component={Contact} />
-        </Router>
+        <HashRouter>
+            <div className="home-background">
+                <Navbar />
+                <Home />
+            </div>
+
+            <CV />
+            <Skills />
+            <Projects />
+            <Contact />
+        </HashRouter>
     );
 }
 

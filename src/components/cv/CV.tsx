@@ -1,15 +1,15 @@
-import Navbar from './../common/Navbar';
+import { Component } from 'react';
 
-function CV() {
-
-    return (
-        <>
-            <Navbar />
-            <div className="CV">
-                cv
+class CV extends Component {
+    render() {
+        return (
+            <div className="cv-background">
+                <div className="CV container" id="CV">
+                    cv
+                </div>
             </div>
-        </>
-    );
+        );
+    }
 }
   
 export default CV;

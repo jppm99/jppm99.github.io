@@ -1,15 +1,15 @@
-import Navbar from './../common/Navbar';
+import { Component } from 'react';
 
-function Projects() {
-
-    return (
-        <>
-            <Navbar />
-            <div className="Projects">
-                projects
+class Projects extends Component {
+    render() {
+        return (
+            <div className="projects-background">
+                <div className="Projects container" id="Projects">
+                    projects
+                </div>
             </div>
-        </>
-    );
+        );
+    }
 }
   
 export default Projects;

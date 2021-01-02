@@ -1,15 +1,15 @@
-import Navbar from './../common/Navbar';
+import { Component } from 'react';
 
-function Contact() {
-
-    return (
-        <>
-            <Navbar />
-            <div className="Contact">
-                contact
+class Contact extends Component {
+    render() {
+        return (
+            <div className="contact-background">
+                <div className="Contact container" id="Contact">
+                    contact
+                </div>
             </div>
-        </>
-    );
+        );
+    }
 }
   
 export default Contact;

@@ -1,15 +1,15 @@
-import Navbar from './../common/Navbar';
+import { Component } from 'react';
 
-function Skills() {
-
-    return (
-        <>
-            <Navbar />
-            <div className="Skills">
-                skills
+class Skills extends Component {
+    render() {
+        return (
+            <div className="skills-background">
+                <div className="Skills container" id="Skills">
+                    skills
+                </div>
             </div>
-        </>
-    );
+        );
+    }
 }
   
 export default Skills;
