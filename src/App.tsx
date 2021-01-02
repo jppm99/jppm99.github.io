@@ -12,15 +12,17 @@ import './App.css';
 function App() {
     return (
         <HashRouter>
-            <div className="home-background">
-                <Navbar />
-                <Home />
-            </div>
+            <div id="body">
+                <div className="home-background">
+                    <Navbar />
+                    <Home />
+                </div>
 
-            <CV />
-            <Skills />
-            <Projects />
-            <Contact />
+                <CV />
+                <Skills />
+                <Projects />
+                <Contact />
+            </div>
         </HashRouter>
     );
 }

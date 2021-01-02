@@ -4,24 +4,33 @@ import { HashLink } from 'react-router-hash-link';
 function Navbar() {
 
   const [scroll, setScroll] = useState(false);
-  const [page, setPage] = useState('#Home');
+  const [page, setPage] = useState("Home");
 
-  useEffect(() => {
-    // Scroll event to change header background
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY >= window.innerHeight);
-    });
-
-    // Keeping track of current page
-    window.addEventListener("hashchange", () => {
-      setPage("" + window.location.hash);
-    }, false);
-  }, []);
+  const get_curr_anchor = () => {
+    let containerDiv = document.getElementById("body");
+    
+    if (containerDiv) {
+      let scrollTop = window.scrollY + window.innerHeight / 2; // When child crosses midle of yhe screen
+      
+      let height = 0;
+      for (let child of containerDiv.children) {
+        let top = height
+        let bottom = height += child.clientHeight
+        if (top < scrollTop && bottom > scrollTop) {
+          // Found the element that's currently viewed!
+          let anchor = child.children.item(0)!.id;
+          if (!anchor) anchor = "Home";
+          setPage(anchor);
+          break;
+        }
+      }
+    }
+  };
   
   const render_btn = (text: String, link: any) => {
     let className: string = "";
 
-    if (page === "#/#" + text) {
+    if (page === text) {
       className = "active-underline"; 
     }
 
@@ -33,6 +42,19 @@ function Navbar() {
       </HashLink>
     );
   };
+
+  useEffect(() => {
+    // Scroll event to change header background
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY >= window.innerHeight);
+      get_curr_anchor();
+    });
+
+    // Keeping track of current page with hash changes
+    // window.addEventListener("hashchange", () => {
+    //   setPage("" + window.location.hash);
+    // }, false);
+  }, []);
 
   return (
     <nav className={"navbar navbar-expand-md fixed-top" + (scroll ? " navbar-scrolled" : "")}>
