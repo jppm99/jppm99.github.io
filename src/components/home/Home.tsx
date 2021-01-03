@@ -1,7 +1,8 @@
 import { Component } from 'react';
+import { TimelineMax, TweenMax, Expo } from 'gsap';
 import * as ScrollMagic from 'scrollmagic';
-import { TimelineMax } from 'gsap';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
+import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 class Home extends Component<{}, { sub_title: String, text: String }> {
     controller: any;
@@ -23,6 +24,7 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
         super(props);
         
         this.controller = new ScrollMagic.Controller();
+
         this.state = {
             sub_title: "_",
             text: ""
@@ -32,16 +34,23 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     componentDidMount() {
         let trigger = document.querySelector(".home-background");
 
-        let wipe = new TimelineMax().fromTo("#Home", { x: 100 }, { x: 0 });
+        let fade = new TimelineMax().fromTo("#Home", 1, { opacity: "1" }, { opacity: "0" });
+        let move_left = new TimelineMax().fromTo("#Home", 1, { x: "15%" }, { x: "-5%", ease: Expo.easeOut });
 
-        new ScrollMagic.Scene({
+        let scene1: any = new ScrollMagic.Scene({
             duration: this.scroll_len,
             triggerElement: trigger,
             triggerHook: 0
-        })
-            .setPin(trigger)
-            .setTweet(wipe)
-            .addTo(this.controller);
+        });
+        scene1.setPin(trigger).setTween(move_left).addTo(this.controller);
+        
+        // var must be created with type any, ts hack
+        let scene2: any = new ScrollMagic.Scene({
+            duration: trigger ? trigger!.clientHeight / 3 : 500,
+            triggerElement: document.getElementById("Skills"),
+            triggerHook: "onEnter"
+        });
+        scene2.setTween(fade).addTo(this.controller);
         
         window.addEventListener("scroll", () => {
             let division_len = this.scroll_len / 3;
@@ -64,7 +73,7 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     render() {
         return (
             <div className="Home container" id="Home">
-                <div className="d-flex align-items-center justify-content-start text-light">
+                <div className="d-flex align-items-center justify-content-start">
                     <div className="flex-column">
                         <span className={"home-title px-2"}>
                             {this.title}
