@@ -59,7 +59,7 @@ function Navbar() {
     // Scroll event to change header background
     window.addEventListener("scroll", () => {
       // Home screen + home pin lenght
-      setScroll(window.scrollY >= window.innerHeight + home_pin_len);
+      setScroll(window.scrollY >= window.innerHeight + home_pin_len - document.getElementById("Navbar")!.clientHeight);
       get_curr_anchor();
     });
 
