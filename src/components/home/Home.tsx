@@ -1,12 +1,12 @@
 import { Component } from 'react';
-import { TimelineMax, TweenMax, Expo } from 'gsap';
+import { TimelineMax, TweenMax, Expo, Power1 } from 'gsap';
 import * as ScrollMagic from 'scrollmagic';
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 class Home extends Component<{}, { sub_title: String, text: String }> {
     controller: any;
-    scroll_len = 600;
+    scroll_len = 1000;
 
     title: String = "Hi!";
     sub_title: String = "Nice to meet you";
@@ -34,7 +34,7 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     componentDidMount() {
         let trigger = document.querySelector(".home-background");
 
-        let fade = new TimelineMax().fromTo("#Home", 1, { opacity: "1" }, { opacity: "0" });
+        let fade = new TimelineMax().fromTo("#Home", 1, { opacity: "1" }, { opacity: "0", ease: Power1.easeIn });
         let move_left = new TimelineMax().fromTo("#Home", 1, { x: "15%" }, { x: "-5%", ease: Expo.easeOut });
 
         let scene1: any = new ScrollMagic.Scene({
@@ -46,14 +46,14 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
         
         // var must be created with type any, ts hack
         let scene2: any = new ScrollMagic.Scene({
-            duration: trigger ? trigger!.clientHeight / 3 : 500,
+            duration: trigger!.clientHeight / 3,
             triggerElement: document.getElementById("Skills"),
             triggerHook: "onEnter"
         });
         scene2.setTween(fade).addTo(this.controller);
         
         window.addEventListener("scroll", () => {
-            let division_len = this.scroll_len / 3;
+            let division_len = this.scroll_len / 4;
             
             if (window.scrollY >= division_len) {
                 this.setState({ sub_title: this.sub_title });

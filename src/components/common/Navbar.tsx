@@ -5,7 +5,7 @@ function Navbar() {
   const [scroll, setScroll] = useState(false);
   const [page, setPage] = useState("Home");
 
-  const home_pin_len = 600;
+  const home_pin_len = 1000;
 
   const get_curr_anchor = () => {
     let containerDiv = document.getElementById("body");
