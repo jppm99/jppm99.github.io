@@ -1,3 +1,10 @@
+/* GENERAL */
+
+#body {
+  font-family: 'Inconsolata', monospace;
+  /* font-family: 'Cabin', sans-serif; */
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -10,6 +17,7 @@
 
 .navbar .logo {
   color: #c46725;
+  font-family: 'Yellowtail', cursive;
 }
 
 .navbar-button span {
@@ -26,7 +34,7 @@
   height: 3px;
   bottom: 0;
   left: 0;
-  background-color: #9b5321;
+  background-color: #c46725;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -44,7 +52,7 @@
   height: 3px;
   bottom: 0;
   left: 0;
-  background-color: #9b5321;
+  background-color: #c46725;
 }
 
 /*==== HOME ====*/
@@ -61,50 +69,99 @@
   width: 100%;
 }
 
+#Home {
+  height: 100%;
+}
+
+#Home .d-flex {
+  height: 85%;
+}
+
+#Home .flex-column {
+  width: 55%;
+}
+
+#Home .home-title {
+  color: #c46725;
+  font-size: 70px;
+  animation: fade-in 3s forwards;
+}
+
+#Home .home-subtitle {
+  color: whitesmoke;
+  font-size: 40px;
+  animation: fade-in 2s forwards;
+}
+
+#Home .home-text {
+  color: white;
+  font-size: 20px;
+  animation: fade-in 2s forwards;
+}
+
+#Home .animate {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*==== CV ====*/
 
 .cv-background {
-  background: url('./assets/home-bg-1.svg') no-repeat;
+  background: brown;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  height: 40em;
   width: 100%;
 }
 
 /*==== SKILLS ====*/
 
 .skills-background {
-  background: url('./assets/home-bg-1.svg') no-repeat;
+  background: darkorange;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  height: 25em;
   width: 100%;
 }
 
 /*==== PROJECTS ====*/
 
 .projects-background {
-  background: url('./assets/home-bg-1.svg') no-repeat;
+  background: darkred;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
 }
 
 /*==== CONTACT ====*/
 
 .contact-background {
-  background: url('./assets/home-bg-1.svg') no-repeat;
+  background: darkslateblue;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  height: 30em;
   width: 100%;
 }

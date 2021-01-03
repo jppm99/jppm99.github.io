@@ -2,15 +2,17 @@ import { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 function Navbar() {
-
   const [scroll, setScroll] = useState(false);
   const [page, setPage] = useState("Home");
+
+  const home_pin_len = 600;
 
   const get_curr_anchor = () => {
     let containerDiv = document.getElementById("body");
     
     if (containerDiv) {
-      let scrollTop = window.scrollY + window.innerHeight / 2; // When child crosses midle of yhe screen
+      // When child crosses middle of yhe screen
+      let scrollTop = window.scrollY + window.innerHeight / 2;
       
       let height = 0;
       for (let child of containerDiv.children) {
@@ -26,6 +28,16 @@ function Navbar() {
       }
     }
   };
+
+  const scrollWithOffset = (el: any) => {
+    let offset = (el.id === "Home" ? -home_pin_len : document.getElementById("Navbar")!.clientHeight);
+    const elementPosition = el.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth"
+    });
+  };
   
   const render_btn = (text: String, link: any) => {
     let className: string = "";
@@ -35,7 +47,7 @@ function Navbar() {
     }
 
     return (
-      <HashLink smooth to={link} className="navbar-button text-light text-decoration-none row">
+      <HashLink to={link} scroll={el => scrollWithOffset(el)} className="navbar-button text-light text-decoration-none row">
         <span className={className}>
           {text}
         </span>
@@ -46,7 +58,8 @@ function Navbar() {
   useEffect(() => {
     // Scroll event to change header background
     window.addEventListener("scroll", () => {
-      setScroll(window.scrollY >= window.innerHeight);
+      // Home screen + home pin lenght
+      setScroll(window.scrollY >= window.innerHeight + home_pin_len);
       get_curr_anchor();
     });
 
@@ -57,10 +70,10 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={"navbar navbar-expand-md fixed-top" + (scroll ? " navbar-scrolled" : "")}>
+    <nav className={"navbar navbar-expand-md fixed-top" + (scroll ? " navbar-scrolled" : "")} id="Navbar">
         <div className="container">
           <HashLink smooth to="/#Home" className="logo text-decoration-none">
-            <h1 className="logo-size secondary-font">
+            <h1 className="logo-size">
               <span className="font-weight-bold">Mota</span>
             </h1>
           </HashLink>
@@ -82,13 +95,13 @@ function Navbar() {
                 {render_btn("Home", "/#Home")}
               </li>
               <li className="nav-item ml-sm-5">
-                {render_btn("CV", "/#CV")}
-              </li>
-              <li className="nav-item ml-sm-5">
                 {render_btn("Skills", "/#Skills")}
               </li>
               <li className="nav-item ml-sm-5">
                 {render_btn("Projects", "/#Projects")}
+              </li>
+              <li className="nav-item ml-sm-5">
+                {render_btn("CV", "/#CV")}
               </li>
               <li className="nav-item ml-sm-5">
                 {render_btn("Contact", "/#Contact")}
