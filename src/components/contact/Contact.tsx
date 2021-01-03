@@ -16,7 +16,7 @@ class Contact extends Component {
     render() {
         return (
             <div className="contact-background">
-                <div className="Contact container d-flex flex-column align-items-center justify-content-center my-5" id="Contact">
+                <div className="Contact container d-flex flex-column align-items-center justify-content-center mb-0 py-5" id="Contact">
                     <div className="mt-5 mb-4 d-flex name">
                         <span className="mx-2">João</span>
                         <span className="mx-2 lastname">Mota</span>

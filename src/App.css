@@ -125,7 +125,7 @@
 /*==== SKILLS ====*/
 
 .skills-background {
-  background: whitesmoke;
+  background: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -137,7 +137,7 @@
 /*==== PROJECTS ====*/
 
 .projects-background {
-  background: white;
+  background: whitesmoke;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -149,7 +149,7 @@
 /*==== CV ====*/
 
 .cv-background {
-  background: whitesmoke;
+  background: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -165,7 +165,7 @@
 /*==== CONTACT ====*/
 
 .contact-background {
-  background: white;
+  background: whitesmoke;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
