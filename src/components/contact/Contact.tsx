@@ -18,8 +18,8 @@ class Contact extends Component {
             <div className="contact-background">
                 <div className="Contact container d-flex flex-column align-items-center justify-content-center my-5" id="Contact">
                     <div className="mt-5 mb-4 d-flex name">
-                        <a className="mx-2">João</a>
-                        <a className="mx-2 lastname">Mota</a>
+                        <span className="mx-2">João</span>
+                        <span className="mx-2 lastname">Mota</span>
                     </div>
 
                     <div title="Copy to clipboard" className="mt-4 mb-2 d-flex align-items-center email" onClick={() => this.copy_to_clipboard(this.email)}>
