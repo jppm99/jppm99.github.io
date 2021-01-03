@@ -173,3 +173,29 @@
   /* height: 60vh; */
   width: 100%;
 }
+
+#Contact .name {
+  font-size: 4em;
+}
+
+#Contact .email {
+  font-size: 3em;
+}
+
+#Contact .linkedin {
+  font-size: 3em;
+}
+
+#Contact .lastname {
+  color: #c46725;
+  font-family: 'Yellowtail', cursive;
+  font-weight: bold;
+}
+
+#Contact .email-icon {
+  color: #c46725;
+}
+
+#Contact .linkedin-icon {
+  color: #c46725;
+}

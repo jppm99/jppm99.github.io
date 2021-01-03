@@ -5,7 +5,7 @@ class Projects extends Component {
     render() {
         return (
             <div className="projects-background">
-                <div className="Projects container d-flex align-items-center justify-content-center" id="Projects">
+                <div className="Projects container d-flex align-items-center justify-content-center my-5" id="Projects">
                     <img className="wip my-5" src={wip} alt="projects"/>
                 </div>
             </div>
