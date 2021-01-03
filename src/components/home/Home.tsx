@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import * as ScrollMagic from 'scrollmagic';
+import { TimelineMax } from 'gsap';
+import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 
 class Home extends Component<{}, { sub_title: String, text: String }> {
     controller: any;
@@ -21,7 +23,6 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
         super(props);
         
         this.controller = new ScrollMagic.Controller();
-
         this.state = {
             sub_title: "_",
             text: ""
@@ -31,12 +32,15 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     componentDidMount() {
         let trigger = document.querySelector(".home-background");
 
+        let wipe = new TimelineMax().fromTo("#Home", { x: 100 }, { x: 0 });
+
         new ScrollMagic.Scene({
             duration: this.scroll_len,
             triggerElement: trigger,
             triggerHook: 0
         })
             .setPin(trigger)
+            .setTweet(wipe)
             .addTo(this.controller);
         
         window.addEventListener("scroll", () => {
