@@ -5,6 +5,10 @@
   /* font-family: 'Cabin', sans-serif; */
 }
 
+.wip {
+  height: 15rem;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -58,7 +62,7 @@
 /*==== HOME ====*/
 
 .home-background {
-  background: url('./assets/bg-site-3-flip.png') no-repeat;
+  background: url('./assets/bg-site-3-flip-compressed.jpg') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -118,50 +122,54 @@
   }
 }
 
-/*==== CV ====*/
-
-.cv-background {
-  background: brown;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 40em;
-  width: 100%;
-}
-
 /*==== SKILLS ====*/
 
 .skills-background {
-  background: darkorange;
+  background: whitesmoke;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 25em;
+  /* height: 40vh; */
   width: 100%;
 }
 
 /*==== PROJECTS ====*/
 
 .projects-background {
-  background: darkred;
+  background: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 50vh;
+  /* height: 50vh; */
   width: 100%;
+}
+
+/*==== CV ====*/
+
+.cv-background {
+  background: whitesmoke;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+#CV {
+  /* height: 100vh; */
 }
 
 /*==== CONTACT ====*/
 
 .contact-background {
-  background: darkslateblue;
+  background: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 30em;
+  /* height: 60vh; */
   width: 100%;
 }

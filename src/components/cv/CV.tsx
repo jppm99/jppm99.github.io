@@ -1,11 +1,12 @@
 import { Component } from 'react';
+import wip from '../../assets/work-in-progress.png';
 
 class CV extends Component {
     render() {
         return (
             <div className="cv-background">
-                <div className="CV container" id="CV">
-                    cv
+                <div className="CV container d-flex align-items-center justify-content-center" id="CV">
+                    <img className="wip my-5" src={wip} alt="cv"/>
                 </div>
             </div>
         );
