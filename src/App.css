@@ -133,6 +133,26 @@
   width: 100%;
 }
 
+#Skills .progress-bar {
+  background-color: #c46725;
+}
+
+#Skills .title {
+  font-size: 2.5rem;
+}
+
+#Skills .title .accent {
+  color: #c46725;
+}
+
+#Skills .list-group-item {
+  background-color: transparent;
+  border-radius: 1rem;
+  margin: 0.3rem;
+  /* Enabling border on left side */
+  border-left-width: 1px;
+}
+
 /*==== PROJECTS ====*/
 
 .projects-background {
