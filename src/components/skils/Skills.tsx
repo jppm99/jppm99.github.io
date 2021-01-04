@@ -98,20 +98,20 @@ class Skills extends Component {
                     </div>
                     <div className="bottom text-center w-100">
                     <div className="mt-5">
-                            <h4>Even though I have not found my niche yet, here are some technologies I feel comfortable with:</h4>
-                            <ul className="list-group list-group-horizontal row d-flex justify-content-center">
+                            <h4>Even though I have <strong>not found my niche yet</strong>, here are some technologies <strong>I feel comfortable with:</strong></h4>
+                            <ul className="list-group list-group-horizontal row d-flex justify-content-center confortable-list">
                                 {this.confortable_techs.map((entry) => (
                                     <li className="list-group-item">{entry}</li>
-                                    ))}
+                                ))}
                             </ul>
                         </div>
 
                         <div className="mt-5">
-                            <h5>And a not exhaustive list of other technologies I have used in the past:</h5>
-                            <ul className="list-group list-group-horizontal row d-flex justify-content-center">
+                            <h5>And a <strong>not exhaustive list</strong> of other technologies I have <strong>used in the past:</strong></h5>
+                            <ul className="list-group list-group-horizontal row d-flex justify-content-center other-list">
                                 {this.other_techs.map((entry) => (
                                     <li className="list-group-item">{entry}</li>
-                                    ))}
+                                ))}
                             </ul>
                         </div>
                     </div>

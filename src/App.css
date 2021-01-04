@@ -133,8 +133,13 @@
   width: 100%;
 }
 
+#Skills .progress {
+  border-radius: 1rem;
+}
+
 #Skills .progress-bar {
   background-color: #c46725;
+  border-radius: 1rem;
 }
 
 #Skills .title {
@@ -143,6 +148,18 @@
 
 #Skills .title .accent {
   color: #c46725;
+}
+
+#Skills .bottom strong {
+  color: #c46725;
+}
+
+#Skills .confortable-list {
+  font-size: 1em;
+}
+
+#Skills .other-list {
+  font-size: 0.95em;
 }
 
 #Skills .list-group-item {
