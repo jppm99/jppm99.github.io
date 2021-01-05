@@ -27,7 +27,7 @@ class CV extends Component<{}, { cv: any }> {
     render() {
         return (
             <div className="cv-background">
-                <div className="CV container d-flex align-items-center justify-content-center my-5" id="CV">
+                <div className="CV container d-flex align-items-center justify-content-center py-5" id="CV">
                     <ReactMarkdown allowDangerousHtml>{this.state.cv}</ReactMarkdown>
                 </div>
             </div>

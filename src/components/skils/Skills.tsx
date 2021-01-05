@@ -33,52 +33,52 @@ class Skills extends Component {
     ];
 
     confortable_techs = [
-        "gfjfgnb",
+        "gfjgjfgnb",
         "gfjffgjfgnb",
-        "gfjghjdjfgdjfgnb",
-        "gfjfgjfgfgnb",
-        "gfgnb",
+        "gfjghmghhjdjfgdjfgnb",
+        "gfjfmhggjfgfgnb",
+        "gfgnfb",
         "gfjfgnb",
         "gfjfgfgjgfjdjfnb",
         "gfjfgfjfgnb",
-        "gfjfgnb",
-        "gfjfgjjfgfgnb",
-        "gfjfgnb",
-        "gfjfgnb",
-        "gfjfgnb",
-        "gfjfgnb",
+        "gfjnb",
+        "gfjfjjfgfgnb",
+        "gfjfnfdb",
+        "gjfghgfnb",
+        "gfjfddnb",
+        "gfjfgolib",
     ];
 
     other_techs = [
-        "gfjfgnb",
-        "gfjffgjfgnb",
+        "fjfgnb",
+        "ddggsg",
         "gfjghjdjfgdjfgnb",
         "gfjfgjfgfgnb",
         "gfgnb",
-        "gfjfgnb",
-        "gfjfgfgjgfjdjfnb",
-        "gfjfgfjfgnb",
-        "gfjfgnb",
+        "gjfgnb",
+        "gfjfgfgjgfjdjfhffnb",
+        "fgfhgfhg",
+        "gffgnb",
         "gfjfgjjfgfgnb",
-        "gfjfgnb",
-        "gfjfgnb",
-        "gfjfgnb",
-        "gfjfgnb",
+        "gfjgnb",
+        "gfjfnb",
+        "gfjfgb",
+        "gfjfgn",
     ];
 
     render() {
         return (
             <div className="skills-background">
-                <div className="Skills container d-flex flex-column align-items-center justify-content-center my-5" id="Skills">
+                <div className="Skills container d-flex flex-column align-items-center justify-content-center py-5" id="Skills">
                     <div className="d-flex flex-row w-100">
                         <div className="d-block w-100 pr-5">
                             <div className="title">
                                 <span className="mr-2 accent">Soft</span>
                                 <span className="ml-2">Skills</span>
                             </div>
-                            {this.soft.map((entry) => (
-                                <div className="my-4">
-                                    <h3>{entry.id}</h3>
+                            {this.soft.map((entry, index) => (
+                                <div key={index} className="my-4">
+                                    <h4>{entry.id}</h4>
                                     <ProgressBar now={entry.value} />
                                 </div>
                             ))}
@@ -88,9 +88,9 @@ class Skills extends Component {
                                 <span className="mr-2 accent">Technical</span>
                                 <span className="ml-2">Skills</span>
                             </div>
-                            {this.technical.map((entry) => (
-                                <div className="my-4">
-                                    <h3>{entry.id}</h3>
+                            {this.technical.map((entry, index) => (
+                                <div key={index} className="my-4">
+                                    <h4>{entry.id}</h4>
                                     <ProgressBar now={entry.value} />
                                 </div>
                             ))}
@@ -100,8 +100,8 @@ class Skills extends Component {
                     <div className="mt-5">
                             <h4>Even though I have <strong>not found my niche yet</strong>, here are some technologies <strong>I feel comfortable with:</strong></h4>
                             <ul className="list-group list-group-horizontal row d-flex justify-content-center confortable-list">
-                                {this.confortable_techs.map((entry) => (
-                                    <li className="list-group-item">{entry}</li>
+                                {this.confortable_techs.map((entry, index) => (
+                                    <li key={index} className="list-group-item">{entry}</li>
                                 ))}
                             </ul>
                         </div>
@@ -109,8 +109,8 @@ class Skills extends Component {
                         <div className="mt-5">
                             <h5>And a <strong>not exhaustive list</strong> of other technologies I have <strong>used in the past:</strong></h5>
                             <ul className="list-group list-group-horizontal row d-flex justify-content-center other-list">
-                                {this.other_techs.map((entry) => (
-                                    <li className="list-group-item">{entry}</li>
+                                {this.other_techs.map((entry, index) => (
+                                    <li key={index} className="list-group-item">{entry}</li>
                                 ))}
                             </ul>
                         </div>
