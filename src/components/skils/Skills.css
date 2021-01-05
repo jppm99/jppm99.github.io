@@ -1,0 +1,37 @@
+#Skills .progress {
+  border-radius: 1rem;
+}
+
+#Skills .progress-bar {
+  background-color: #c46725;
+  border-radius: 1rem;
+}
+
+#Skills .title {
+  font-size: 2rem;
+}
+
+#Skills .title .accent {
+  color: #c46725;
+}
+
+#Skills .bottom strong {
+  color: #c46725;
+}
+
+#Skills .confortable-list {
+  font-size: 1em;
+}
+
+#Skills .other-list {
+  font-size: 0.95em;
+}
+
+#Skills .list-group-item {
+  background-color: transparent;
+  border-radius: 1rem;
+  margin: 0.3rem;
+  /* Enabling border on left side */
+  border-left-width: 1px;
+}
+  

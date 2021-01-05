@@ -1,4 +1,4 @@
-/* GENERAL */
+/*==== GENERAL ====*/
 
 #body {
   font-family: 'Inconsolata', monospace;
@@ -15,54 +15,11 @@
   background: none;
 }
 
-.navbar.navbar-scrolled {
-  background-color: #222831;
-}
-
-.navbar .logo {
-  color: #c46725;
-  font-family: 'Yellowtail', cursive;
-}
-
-.navbar-button span {
-  text-decoration: none;
-  position: relative;
-
-  transition: 0.5s ease all .3s;
-}
-
-.navbar-button span:not(.active-underline)::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: #c46725;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.navbar-button:hover span:not(.active-underline)::before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-.navbar-button span.active-underline::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: #c46725;
-}
 
 /*==== HOME ====*/
 
 .home-background {
-  background: url('./assets/bg-site-3-flip-compressed.jpg') no-repeat;
+  background: url('./assets/bg-site-3-flip-compressed-3.jpg') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -73,54 +30,6 @@
   width: 100%;
 }
 
-#Home {
-  height: 100%;
-}
-
-#Home .d-flex {
-  height: 85%;
-}
-
-#Home .flex-column {
-  width: 55%;
-}
-
-#Home .home-title {
-  color: #c46725;
-  font-size: 6.2rem;
-  animation: fade-in 3s forwards;
-}
-
-#Home .home-subtitle {
-  color: whitesmoke;
-  font-size: 2.8rem;
-  animation: fade-in 2s forwards;
-}
-
-#Home .home-text {
-  color: white;
-  font-size: 1.1rem;
-  animation: fade-in 2s forwards;
-}
-
-#Home .animate {
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 /*==== SKILLS ====*/
 
@@ -133,42 +42,6 @@
   width: 100%;
 }
 
-#Skills .progress {
-  border-radius: 1rem;
-}
-
-#Skills .progress-bar {
-  background-color: #c46725;
-  border-radius: 1rem;
-}
-
-#Skills .title {
-  font-size: 2rem;
-}
-
-#Skills .title .accent {
-  color: #c46725;
-}
-
-#Skills .bottom strong {
-  color: #c46725;
-}
-
-#Skills .confortable-list {
-  font-size: 1em;
-}
-
-#Skills .other-list {
-  font-size: 0.95em;
-}
-
-#Skills .list-group-item {
-  background-color: transparent;
-  border-radius: 1rem;
-  margin: 0.3rem;
-  /* Enabling border on left side */
-  border-left-width: 1px;
-}
 
 /*==== PROJECTS ====*/
 
@@ -181,53 +54,7 @@
   width: 100%;
 }
 
-#Projects strong {
-  color: #c46725;
-}
 
-#Projects .projects-holder {
-  width: 100%;
-}
-
-#Projects .menu-item-wrapper {
-  /* position: relative; */
-  /* top: 0; */
-  border: none;
-  
-}
-
-#Projects .menu-item {
-  background-color: #ffffff;
-  border-radius: 1rem;
-  width: 250px;
-  height: 400px;
-  cursor: pointer;
-  user-select: none;
-  border: none;
-}
-
-#Projects .menu-item .top {
-  height: 50%;
-}
-
-#Projects .menu-item .bottom {
-  height: 50%;
-}
-
-#Projects .menu-item img {
-  border-radius: 1rem;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-
-  width: 100%;
-  height: 100%;
-}
- 
-#Projects .scroll-menu-arrow {
-  padding: 1.5rem;
-  cursor: pointer;
-  font-size: 3rem;
-}
  
 /*==== CV ====*/
 
@@ -240,9 +67,6 @@
   width: 100%;
 }
 
-#CV h1 {
-  color: #c46725;
-}
 
 /*==== CONTACT ====*/
 
@@ -253,30 +77,4 @@
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
-}
-
-#Contact .name {
-  font-size: 4em;
-}
-
-#Contact .email {
-  font-size: 3em;
-}
-
-#Contact .linkedin {
-  font-size: 3em;
-}
-
-#Contact .lastname {
-  color: #c46725;
-  font-family: 'Yellowtail', cursive;
-  font-weight: bold;
-}
-
-#Contact .email-icon {
-  color: #c46725;
-}
-
-#Contact .linkedin-icon {
-  color: #c46725;
 }

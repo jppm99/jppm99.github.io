@@ -1,15 +1,18 @@
+import React from 'react'
 import { HashRouter } from 'react-router-dom';
+
+import './App.css';
 
 import Navbar from './components/common/Navbar';
 import Home from './components/home/Home';
 import Skills from './components/skils/Skills';
-import Projects from './components/projects/Projects';
-import CV from './components/cv/CV';
 import Contact from './components/contact/Contact';
 
-import './App.css';
+const CV = React.lazy(() => import('./components/cv/CV'));
+const Projects = React.lazy(() => import('./components/projects/Projects'));
 
 function App() {
+    console.warn("Hello fellow engineer");
     return (
         <HashRouter>
             <div id="body">
@@ -19,8 +22,15 @@ function App() {
                 </div>
 
                 <Skills />
-                <Projects />
-                <CV />
+                
+                <React.Suspense fallback={<div className="projects-background">loading..</div>} >
+                    <Projects />
+                </React.Suspense>
+
+                <React.Suspense fallback={<div className="cv-background">loading..</div>} >
+                    <CV />
+                </React.Suspense>
+
                 <Contact />
             </div>
         </HashRouter>

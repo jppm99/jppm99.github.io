@@ -1,10 +1,12 @@
 import { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
+
+import './Projects.css';
+
 import img1 from "../../assets/work-in-progress.png";
 import img2 from "../../assets/proj-template-square.jpg";
 import img3 from "../../assets/proj-template.jpg";
 
-//! titles and descriptions with diferent number break alignments
 const projects = [
     {
         key: 1,
@@ -59,7 +61,7 @@ class Projects extends Component {
     get_items = () =>
         projects.map((element) => {
             return (
-                <div key={element.key} className={'menu-item m-5'}>
+                <div key={element.key} className="menu-item m-5">
                     <div className="text-center internal my-0 h-100">
                         <div className="top">
                             <img src={ element.image_path } alt="Project's" className="" />
@@ -97,7 +99,7 @@ class Projects extends Component {
 
     render() {
         return (
-            <div className="projects-background">
+            <div className="projects-background py-5">
                 <div className="Projects container d-flex flex-column align-items-center justify-content-center py-5" id="Projects">
                     <h2>Some <strong>projects</strong> I have worked on:</h2>
                     <div className="mt-4 projects-holder">

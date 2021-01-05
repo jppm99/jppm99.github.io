@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
+import './Navbar.css';
+
 function Navbar() {
   const [scroll, setScroll] = useState(false);
   const [page, setPage] = useState("Home");
@@ -55,18 +57,17 @@ function Navbar() {
     );
   };
 
+  const onScroll = () => {
+    // Home screen + home pin lenght
+    setScroll(window.scrollY >= window.innerHeight + home_pin_len - document.getElementById("Navbar")!.clientHeight);
+    get_curr_anchor();
+  }
+
   useEffect(() => {
     // Scroll event to change header background
-    window.addEventListener("scroll", () => {
-      // Home screen + home pin lenght
-      setScroll(window.scrollY >= window.innerHeight + home_pin_len - document.getElementById("Navbar")!.clientHeight);
-      get_curr_anchor();
-    });
+    window.addEventListener("scroll", onScroll);
 
-    // Keeping track of current page with hash changes
-    // window.addEventListener("hashchange", () => {
-    //   setPage("" + window.location.hash);
-    // }, false);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (

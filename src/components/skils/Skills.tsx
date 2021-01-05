@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import { ProgressBar } from 'react-bootstrap';
 
+import './Skills.css';
+
 class Skills extends Component {
     soft = [
         {
@@ -68,7 +70,7 @@ class Skills extends Component {
 
     render() {
         return (
-            <div className="skills-background">
+            <div className="skills-background py-5">
                 <div className="Skills container d-flex flex-column align-items-center justify-content-center py-5" id="Skills">
                     <div className="d-flex flex-row w-100">
                         <div className="d-block w-100 pr-5">

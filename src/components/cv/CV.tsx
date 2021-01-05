@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
+import './CV.css';
+
 class CV extends Component<{}, { cv: any }> {
     cv_link = "https://raw.githubusercontent.com/jppm99/CV/master/CV.md";
 
@@ -26,7 +28,7 @@ class CV extends Component<{}, { cv: any }> {
 
     render() {
         return (
-            <div className="cv-background">
+            <div className="cv-background py-5">
                 <div className="CV container d-flex align-items-center justify-content-center py-5" id="CV">
                     <ReactMarkdown allowDangerousHtml>{this.state.cv}</ReactMarkdown>
                 </div>
