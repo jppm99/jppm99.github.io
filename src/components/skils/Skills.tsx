@@ -6,66 +6,95 @@ import './Skills.css';
 class Skills extends Component {
     soft = [
         {
-            id: "s1",
-            value: 25
+            id: "Team work",
+            value: 85
         },
         {
-            id: "s2",
-            value: 55
+            id: "Desire to learn",
+            value: 100
         },
         {
-            id: "s3",
-            value: 95
-        }
+            id: "Leadership",
+            value: 70
+        },
+        {
+            id: "Persistence",
+            value: 90
+        },
+        {
+            id: "Performing under pressure",
+            value: 100
+        },
+        {
+            id: "Creativity",
+            value: 80
+        },
+        
     ];
 
     technical = [
         {
-            id: "t1",
-            value: 95
+            id: "Frontend development",
+            value: 73
         },
         {
-            id: "t2",
+            id: "Backend development",
+            value: 80
+        },
+        {
+            id: "Code quality",
+            value: 90
+        },
+        {
+            id: "Databases",
             value: 55
         },
         {
-            id: "t3",
-            value: 25
-        }
+            id: "Algorithms and data structures",
+            value: 80
+        },
+        {
+            id: "Artificial inteligence",
+            value: 65
+        },
     ];
 
     confortable_techs = [
-        "gfjgjfgnb",
-        "gfjffgjfgnb",
-        "gfjghmghhjdjfgdjfgnb",
-        "gfjfmhggjfgfgnb",
-        "gfgnfb",
-        "gfjfgnb",
-        "gfjfgfgjgfjdjfnb",
-        "gfjfgfjfgnb",
-        "gfjnb",
-        "gfjfjjfgfgnb",
-        "gfjfnfdb",
-        "gjfghgfnb",
-        "gfjfddnb",
-        "gfjfgolib",
+        "C",
+        "Java",
+        "Git",
+        "C#",
+        "Google Cloud App Engine",
+        "React",
+        "MongoDB",
+        "Unity",
+        "Python",
+        "Linux",
+        "Bootstrap",
+        "JavaScript",
+        "NodeJS",
+        "HTML",
+        "Docker",
+        "SCSS",
     ];
 
     other_techs = [
-        "fjfgnb",
-        "ddggsg",
-        "gfjghjdjfgdjfgnb",
-        "gfjfgjfgfgnb",
-        "gfgnb",
-        "gjfgnb",
-        "gfjfgfgjgfjdjfhffnb",
-        "fgfhgfhg",
-        "gffgnb",
-        "gfjfgjjfgfgnb",
-        "gfjgnb",
-        "gfjfnb",
-        "gfjfgb",
-        "gfjfgn",
+        "TypeScript",
+        "C++",
+        "GLSL",
+        "PHP",
+        "Laravel",
+        "SQLite",
+        "Dart",
+        "Assembly",
+        "OpenGL",
+        "Flutter",
+        "Prolog",
+        "Alloy",
+        "CSS",
+        "Scikit-learn",
+        "EJS",
+        "Dafny",
     ];
 
     render() {

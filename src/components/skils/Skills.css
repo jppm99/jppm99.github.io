@@ -31,7 +31,8 @@
   background-color: transparent;
   border-radius: 1rem;
   margin: 0.3rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
   /* Enabling border on left side */
   border-left-width: 1px;
 }
-  

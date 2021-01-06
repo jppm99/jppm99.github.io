@@ -12,7 +12,7 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     scroll_len = 1000;
 
     title: String = "Hi!";
-    sub_title: String = "Nice to meet you";
+    sub_title: String = "Nice to meet you.";
     text: String = `
         Lorem ipsum lacus sit amet lorem placerat congue. 
         Proin venenatis justo id gravida sollicitudin. Morbi eu tincidunt eros. 
