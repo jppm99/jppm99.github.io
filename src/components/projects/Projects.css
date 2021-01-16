@@ -13,7 +13,7 @@
 #Projects .menu-item {
   background-color: #ffffff;
   border-radius: 1rem;
-  width: 250px;
+  width: 300px;
   height: 400px;
   cursor: pointer;
   user-select: none;
@@ -21,11 +21,20 @@
 }
 
 #Projects .menu-item .top {
-  height: 50%;
+  height: 45%;
+}
+
+#Projects .menu-item .middle {
+  overflow: hidden;
+  height: 45%;
 }
 
 #Projects .menu-item .bottom {
-  height: 50%;
+  height: 10%;
+}
+
+#Projects .tech {
+  font-size: larger;
 }
 
 #Projects .menu-item img {

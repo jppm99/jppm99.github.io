@@ -1,18 +1,20 @@
 import React from 'react'
 import { HashRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import './App.css';
 
 import Navbar from './components/common/Navbar';
 import Home from './components/home/Home';
 import Skills from './components/skils/Skills';
-import Contact from './components/contact/Contact';
 
-const CV = React.lazy(() => import('./components/cv/CV'));
 const Projects = React.lazy(() => import('./components/projects/Projects'));
+const Contact  = React.lazy(() => import('./components/contact/Contact'));
 
 function App() {
+    ReactGA.initialize('G-PLJY6SZNWF');
     console.warn("Hello fellow engineer");
+
     return (
         <HashRouter>
             <div id="body">
@@ -27,11 +29,9 @@ function App() {
                     <Projects />
                 </React.Suspense>
 
-                <React.Suspense fallback={<div className="cv-background">loading..</div>} >
-                    <CV />
+                <React.Suspense fallback={<div className="contact-background">loading..</div>} >
+                    <Contact />
                 </React.Suspense>
-
-                <Contact />
             </div>
         </HashRouter>
     );

@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ReactGA from 'react-ga';
 
 import './Contact.css';
 
@@ -7,6 +8,11 @@ class Contact extends Component {
     link_linkedin = "https://www.linkedin.com/in/jo%C3%A3o-mota-9519821b4/";
 
     open_linkedin(link: string) {
+        ReactGA.event({
+            category: "Redirect",
+            action: "Redirected to LinkedIn",
+        });
+        
         let win: any = window.open(link, '_blank');
         win.focus();
     }
@@ -31,7 +37,7 @@ class Contact extends Component {
 
                     <div title="Open LinkedIn" className="mb-5 mt-3 d-flex align-items-center linkedin" onClick={() => this.open_linkedin(this.link_linkedin)}>
                         <i className="fab fa-linkedin-in linkedin-icon mx-2"></i>
-                        <div className="h1 mx-2 mb-0">LinkedIn</div>
+                        <div className="h1 mx-2 mb-0">joão-mota-9519821b4</div>
                     </div>
                 </div>
             </div>

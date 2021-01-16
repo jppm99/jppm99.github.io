@@ -7,7 +7,7 @@ class Skills extends Component {
     soft = [
         {
             id: "Team work",
-            value: 85
+            value: 90
         },
         {
             id: "Desire to learn",
@@ -54,39 +54,39 @@ class Skills extends Component {
             value: 80
         },
         {
-            id: "Artificial inteligence",
+            id: "Artificial intelligence",
             value: 65
         },
     ];
 
-    confortable_techs = [
+    comfortable_techs = [
         "C",
         "Java",
         "Git",
-        "C#",
         "Google Cloud App Engine",
-        "React",
-        "MongoDB",
         "Unity",
-        "Python",
         "Linux",
-        "Bootstrap",
         "JavaScript",
-        "NodeJS",
         "HTML",
         "Docker",
         "SCSS",
     ];
-
+    
     other_techs = [
         "TypeScript",
+        "React",
+        "NodeJS",
         "C++",
         "GLSL",
+        "Bootstrap",
+        "Python",
         "PHP",
         "Laravel",
         "SQLite",
         "Dart",
         "Assembly",
+        "MongoDB",
+        "C#",
         "OpenGL",
         "Flutter",
         "Prolog",
@@ -131,7 +131,7 @@ class Skills extends Component {
                     <div className="mt-5">
                             <h4>Even though I have <strong>not found my niche yet</strong>, here are some technologies <strong>I feel comfortable with:</strong></h4>
                             <ul className="list-group list-group-horizontal row d-flex justify-content-center confortable-list">
-                                {this.confortable_techs.map((entry, index) => (
+                                {this.comfortable_techs.map((entry, index) => (
                                     <li key={index} className="list-group-item">{entry}</li>
                                 ))}
                             </ul>

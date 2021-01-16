@@ -12,15 +12,16 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     scroll_len = 1000;
 
     title: String = "Hi!";
-    sub_title: String = "Nice to meet you.";
+    sub_title: String = "Nice to meet you";
     text: String = `
-        Lorem ipsum lacus sit amet lorem placerat congue. 
-        Proin venenatis justo id gravida sollicitudin. Morbi eu tincidunt eros. 
-        Vestibulum interdum augue a purus semper congue. 
-        Aenean non nunc elementum magna ullamcorper rutrum ut id mauris. 
-        Maecenas pretium magna placerat odio ornare, ac consectetur augue pellentesque. 
-        Aliquam pulvinar condimentum sollicitudin. 
-        Morbi pretium ac mi non ornare. Duis eu bibendum urna.
+        My name is João Mota, I am a 21-year-old software engineering student
+        passionate about software development and learning new things.
+        From a young age, I knew I wanted to be an inventor but it was
+        only in my 13s I realized, when I first built a computer, that 
+        it means tech and engineering.
+        That passion for technology lead me to start coding in high school
+        and I am currently pursuing a Master's in software engineering
+        and looking for ways to sharpen and apply what I have learned.
     `;
     
     constructor(props: any) {

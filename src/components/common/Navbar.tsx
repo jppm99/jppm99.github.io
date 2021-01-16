@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
+import ReactGA from 'react-ga';
 
 import './Navbar.css';
 
@@ -8,6 +9,7 @@ function Navbar() {
   const [page, setPage] = useState("Home");
 
   const home_pin_len = 1000;
+  const cv_link = "https://github.com/jppm99/CV/blob/master/joaoMotaCV.pdf";
 
   const get_curr_anchor = () => {
     let containerDiv = document.getElementById("body");
@@ -57,6 +59,15 @@ function Navbar() {
     );
   };
 
+  const open_tab = (link: string) => {
+    ReactGA.event({
+      category: "Redirect",
+      action: "Redirected to CV",
+    });
+    
+    window.open(link, '_blank')?.focus(); 
+  }
+
   useEffect(() => {
     const onScroll = () => {
       // Home screen + home pin lenght
@@ -102,7 +113,13 @@ function Navbar() {
                 {render_btn("Projects", "/#Projects")}
               </li>
               <li className="nav-item ml-sm-5">
-                {render_btn("CV", "/#CV")}
+                <div
+                  className="navbar-button text-light text-decoration-none row"
+                  id="cv_btn"
+                  onClick={() => open_tab(cv_link)}
+                >
+                    CV
+                </div>
               </li>
               <li className="nav-item ml-sm-5">
                 {render_btn("Contact", "/#Contact")}

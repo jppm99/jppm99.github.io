@@ -41,3 +41,7 @@
   left: 0;
   background-color: #c46725;
 }
+
+.navbar #cv_btn {
+  cursor: pointer;
+}

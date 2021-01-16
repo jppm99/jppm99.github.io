@@ -19,7 +19,7 @@
 /*==== HOME ====*/
 
 .home-background {
-  background: url('./assets/bg-site-3-flip-compressed-3.jpg') no-repeat;
+  background: url('./assets/bg-site-3-flip-compressed.jpg') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -55,23 +55,10 @@
 }
 
 
- 
-/*==== CV ====*/
-
-.cv-background {
-  background: white;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-}
-
-
 /*==== CONTACT ====*/
 
 .contact-background {
-  background: whitesmoke;
+  background: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

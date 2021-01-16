@@ -4,10 +4,12 @@
 
 #Contact .email {
   font-size: 3em;
+  cursor: pointer;
 }
 
 #Contact .linkedin {
   font-size: 3em;
+  cursor: pointer;
 }
 
 #Contact .lastname {

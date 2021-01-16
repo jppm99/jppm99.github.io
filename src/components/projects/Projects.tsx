@@ -3,45 +3,81 @@ import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 import './Projects.css';
 
-import img1 from "../../assets/work-in-progress.png";
-import img2 from "../../assets/proj-template-square.jpg";
-import img3 from "../../assets/proj-template.jpg";
+import ldso from "../../assets/ldso.jpg";
+import personalWebsite from "../../assets/personalWebsite.jpg";
+import ai from "../../assets/iart.jpg";
+import hyperCasual from "../../assets/hypercasual.jpg";
+import fileTransfer from "../../assets/fileTransfer.jpg";
 
 const projects = [
     {
-        key: 1,
-        image_path: img1,
-        title: "Titulo grande gggggg gggggggg gggggg",
-        category: "testing",
-        redirect: ""
+        image_path: ldso,
+        title: "Platform for aeronautical medicine",
+        description: `
+                The goal is to provide aeronautical doctors in europe 
+                a way to share and store information about their patients.
+            `,
+        redirect: "",
+        technologies: [
+            "fab fa-docker",
+            "fab fa-node-js",
+            "fab fa-react",
+            "fab fa-bootstrap",
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+        ]
     },
     {
-        key: 2,
-        image_path: img2,
-        title: "t2 titulo",
-        category: "testing erhjeoi ioej gioejio oierjg io",
-        redirect: ""
+        image_path: ai,
+        title: "Predicting the odds for football matches",
+        description: `
+                Using different supervised learning algorithms to
+                best predict the odds for football matches.
+            `,
+        redirect: "https://github.com/jppm99/IART/blob/master/T2/src/notebook.ipynb",
+        technologies: [
+            "fab fa-python",
+        ]
     },
     {
-        key: 3,
-        image_path: img3,
-        title: "t3",
-        category: "testes - idk",
-        redirect: ""
+        image_path: hyperCasual,
+        title: "Hyper-casual mobile game",
+        description: `
+                An hyper-casual mobile game developed in Unity that I
+                am working on. (work in progress)
+            `,
+        redirect: "",
+        technologies: [
+            "fab fa-unity",
+        ]
     },
     {
-        key: 4,
-        image_path: img1,
-        title: "t4",
-        category: "testes - idk",
-        redirect: "4"
+        image_path: fileTransfer,
+        title: "Serial port file transfer",
+        description: `
+                A C implementation of fail-safe file transfer
+                over a serial port connection.
+            `,
+        redirect: "https://github.com/jppm99/Serial-port-file-transfer",
+        technologies: [
+            
+        ]
     },
     {
-        key: 5,
-        image_path: img1,
-        title: "t5",
-        category: "testes - idk",
-        redirect: ""
+        image_path: personalWebsite,
+        title: "This website!",
+        description: `
+                My personal website, that I created to showcase some of my skills,
+                projects and CV, while practicing React and Typescript.
+            `,
+        redirect: "https://github.com/jppm99/jppm99.github.io",
+        technologies: [
+            "fab fa-react",
+            "fab fa-bootstrap",
+            "fab fa-html5",
+            "fab fa-css3-alt",
+        ]
     },
 ];
 
@@ -59,16 +95,25 @@ class Projects extends Component {
     }    
 
     get_items = () =>
-        projects.map((element) => {
+        projects.map((element, index) => {
             return (
-                <div key={element.key} className="menu-item m-5">
+                <div key={index} className="menu-item m-5">
                     <div className="text-center internal my-0 h-100">
                         <div className="top">
                             <img src={ element.image_path } alt="Project's" className="" />
                         </div>
-                        <div className="bottom p-3 text-left">
+                        <div className="middle p-3 text-left">
                             <h4><strong>{element.title}</strong></h4>
-                            <p>{ element.category }</p>
+                            <p>{ element.description }</p>
+                        </div>
+                        <div className="bottom text-left p-2">
+                            {
+                                element.technologies.map((tech) => {
+                                    return (
+                                        <p className={"tech pl-2 " + tech} />
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
@@ -89,12 +134,12 @@ class Projects extends Component {
     );
 
     on_proj_click(item_key: string | number | null) {
-        let item = projects.filter((elem) => `${elem.key}` === item_key);
-
-        if (item[0] && item[0].redirect !== "") {
-            window.open(item[0].redirect, '_blank')?.focus();
+        if (item_key && item_key !== "") {
+            let item: any = projects[+item_key];
+            if (item.redirect !== "") {
+                window.open(item.redirect, '_blank')?.focus();
+            }
         }
-        
     }
 
     render() {
@@ -113,7 +158,6 @@ class Projects extends Component {
                             translate={1}
                             onSelect={this.on_proj_click}
                             itemClass={'align-top'} //! don't remove
-                            // alignCenter={false}
                         />
                     </div>
                 </div>
