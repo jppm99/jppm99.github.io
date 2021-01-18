@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import ReactGA from 'react-ga';
+import axios from 'axios';
 
 import './Navbar.css';
 
@@ -9,7 +9,8 @@ function Navbar() {
   const [page, setPage] = useState("Home");
 
   const home_pin_len = 1000;
-  const cv_link = "https://github.com/jppm99/CV/blob/master/joaoMotaCV.pdf";
+  const resume_download_link = "https://github.com/jppm99/CV/raw/master/joaoMotaResume.pdf";
+  const resume_fallback_link = "https://github.com/jppm99/CV/blob/master/joaoMotaResume.pdf";
 
   const get_curr_anchor = () => {
     let containerDiv = document.getElementById("body");
@@ -59,16 +60,36 @@ function Navbar() {
     );
   };
 
-  const open_tab = (link: string) => {
-    ReactGA.event({
-      category: "Redirect",
-      action: "Redirected to CV",
-    });
-    
-    window.open(link, '_blank')?.focus(); 
+  const open_resume = () => {
+    // Load resume thx: https://stackoverflow.com/a/63375373/7392273
+    axios.get(
+      `https://cors-anywhere.herokuapp.com/${resume_download_link}`,
+      {
+        responseType: 'blob'
+      }
+    ).then(
+      (response) => {
+        //Create a Blob from the PDF Stream
+        const file = new Blob([response.data], { type: "application/pdf" });
+        
+        //Build a URL from the file
+        const fileURL = URL.createObjectURL(file);
+        
+        //Open the URL on new tab
+        window.open(fileURL, '_blank')?.focus();
+      }
+    ).catch(
+      (err) => {
+        console.log(err);
+
+        // Opening file on Github in a new tab
+        window.open(resume_fallback_link, '_blank')?.focus();
+      }
+    );
   }
 
   useEffect(() => {
+    // Change background on scroll
     const onScroll = () => {
       // Home screen + home pin lenght
       setScroll(window.scrollY >= window.innerHeight + home_pin_len - document.getElementById("Navbar")!.clientHeight);
@@ -116,9 +137,9 @@ function Navbar() {
                 <div
                   className="navbar-button text-light text-decoration-none row"
                   id="cv_btn"
-                  onClick={() => open_tab(cv_link)}
+                  onClick={() => open_resume()}
                 >
-                    CV
+                    Resumé
                 </div>
               </li>
               <li className="nav-item ml-sm-5">

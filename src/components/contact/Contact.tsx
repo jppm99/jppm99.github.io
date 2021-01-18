@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import ReactGA from 'react-ga';
 
 import './Contact.css';
 
@@ -8,11 +7,6 @@ class Contact extends Component {
     link_linkedin = "https://www.linkedin.com/in/jo%C3%A3o-mota-9519821b4/";
 
     open_linkedin(link: string) {
-        ReactGA.event({
-            category: "Redirect",
-            action: "Redirected to LinkedIn",
-        });
-        
         let win: any = window.open(link, '_blank');
         win.focus();
     }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { HashRouter } from 'react-router-dom';
-import ReactGA from 'react-ga';
 
 import './App.css';
 
@@ -9,10 +8,10 @@ import Home from './components/home/Home';
 import Skills from './components/skils/Skills';
 
 const Projects = React.lazy(() => import('./components/projects/Projects'));
-const Contact  = React.lazy(() => import('./components/contact/Contact'));
+const Contact = React.lazy(() => import('./components/contact/Contact'));
+
 
 function App() {
-    ReactGA.initialize('G-PLJY6SZNWF');
     console.warn("Hello fellow engineer");
 
     return (
