@@ -4,7 +4,7 @@ import './Contact.css';
 
 class Contact extends Component {
     email = "jpmota99@gmail.com";
-    link_linkedin = "https://www.linkedin.com/in/jo%C3%A3o-mota-9519821b4/";
+    link_linkedin = "https://www.linkedin.com/in/joao-mota99/";
 
     open_linkedin(link: string) {
         let win: any = window.open(link, '_blank');
@@ -31,7 +31,7 @@ class Contact extends Component {
 
                     <div title="Open LinkedIn" className="mb-5 mt-3 d-flex align-items-center linkedin" onClick={() => this.open_linkedin(this.link_linkedin)}>
                         <i className="fab fa-linkedin-in linkedin-icon mx-2"></i>
-                        <div className="h1 mx-2 mb-0">joão-mota-9519821b4</div>
+                        <div className="h1 mx-2 mb-0">joao-mota99</div>
                     </div>
                 </div>
             </div>
