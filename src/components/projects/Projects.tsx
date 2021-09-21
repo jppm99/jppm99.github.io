@@ -15,6 +15,19 @@ import lostForest from "../../assets/lostForest.jpg";
 
 const projects = [
     {
+        image_path: hyperCasual,
+        title: "Hyper-casual mobile game",
+        description: `
+                An hyper-casual mobile game developed in Unity called Falling Colors.
+                Available on both Google Play and the App Store!
+            `,
+        redirect: "https://apps.apple.com/us/app/falling-colors-catch-them/id1561799594",
+        technologies: [
+            "fab fa-unity",
+            "fab fa-app-store-ios"
+        ]
+    },
+    {
         image_path: ldso,
         title: "Platform for aeronautical medicine",
         description: `
@@ -30,19 +43,6 @@ const projects = [
             "fab fa-html5",
             "fab fa-css3-alt",
             "fab fa-js-square",
-        ]
-    },
-    {
-        image_path: hyperCasual,
-        title: "Hyper-casual mobile game",
-        description: `
-                An hyper-casual mobile game developed in Unity called Falling Colors. Available on both
-                Google Play and the App Store!
-            `,
-        redirect: "https://apps.apple.com/us/app/falling-colors-catch-them/id1561799594",
-        technologies: [
-            "fab fa-unity",
-            "fab fa-app-store-ios"
         ]
     },
     {
@@ -171,17 +171,6 @@ class Projects extends Component {
                     <h2>Some <strong>projects</strong> I have worked on:</h2>
 
                     <div className="mt-4 projects-holder">
-                        {/* <ScrollMenu
-                            data={this.menuItems}
-                            arrowLeft={this.arrow_left}
-                            arrowRight={this.arrow_right}
-                            wheel={false}
-                            scrollBy={1}
-                            transition={0.7}
-                            translate={1}
-                            onSelect={this.on_proj_click}
-                            itemClass={'align-top'} //! don't remove
-                        /> */}
                         <div id="splide" className="splide">
                             <div className="splide__track">
                                 <ul className="splide__list">
