@@ -14,7 +14,7 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     title: String = "Hi!";
     sub_title: String = "Nice to meet you";
     text: String = `
-        My name is João Mota, I am a 22-year-old software engineering student
+        My name is João Mota, I am a ${this.getCurrentAge()}-year-old software engineering student
         passionate about software development and learning new things.
         From a young age, I knew I wanted to be an inventor but it was
         only in my 13s I realized, when I first built a computer, that 
@@ -31,10 +31,16 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
 
         this.state = {
             sub_title: "_",
-            text: ""
+            text: "",
         };
 
         this.onScroll = this.onScroll.bind(this);
+    }
+
+    getCurrentAge() {
+        var ageDifMs = Date.now() - new Date(1999, 1, 13).getTime();
+        var ageDate = new Date(ageDifMs); // milliseconds from epoch
+        return "" + Math.abs(ageDate.getUTCFullYear() - 1970);
     }
 
     onScroll() {
