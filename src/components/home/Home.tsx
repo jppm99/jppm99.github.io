@@ -14,14 +14,24 @@ class Home extends Component<{}, { sub_title: String, text: String }> {
     title: String = "Hi!";
     sub_title: String = "Nice to meet you";
     text: String = `
-        My name is João Mota, I am a ${this.getCurrentAge()}-year-old software engineering student
-        passionate about software development and learning new things.
-        From a young age, I knew I wanted to be an inventor but it was
-        only in my 13s I realized, when I first built a computer, that 
-        it means tech and engineering.
-        That passion for technology lead me to start coding in high school
-        and I am currently pursuing a Master's in software engineering
-        and looking for ways to sharpen and apply what I have learned.
+        I'm João Mota, a ${this.getCurrentAge()}-years-old
+        ML research engineer with a passion for technology.
+        From a young age, I aspired to be an inventor, and this drove me into the world
+        of tech as I built my first computer and later, during my high school years,
+        when I started to learn how to code.
+
+        I have a MSc degree in computer engineering, during which 
+        I joined INESCTEC via a research grant.
+        Subsequently, I had the opportunity to work on my master's
+        thesis through an academic internship with Bosch, which provided
+        practical insights into collaborating with industry professionals.
+
+        Following the completion of my degree, I joined Bosch full-time
+        to contribute to the THEIA project, focusing in deep-learning
+        for LiDAR based perception tasks.
+
+        I am driven to continue learning, growing, and applying my skills
+        to innovative projects that make a positive impact.   
     `;
     
     constructor(props: any) {
