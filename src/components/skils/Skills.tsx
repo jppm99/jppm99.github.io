@@ -34,67 +34,64 @@ class Skills extends Component {
 
     technical = [
         {
-            id: "Frontend development",
-            value: 73
+            id: "MLOps",
+            value: 80
         },
         {
-            id: "Backend development",
-            value: 80
+            id: "Computer Vision",
+            value: 75
         },
         {
             id: "Code quality",
             value: 90
         },
         {
-            id: "Databases",
-            value: 55
-        },
-        {
-            id: "Algorithms and data structures",
+            id: "Deep-Learning Algorithms",
             value: 80
         },
         {
-            id: "Artificial intelligence",
-            value: 65
+            id: "Algorithms and data structures",
+            value: 75
+        },
+        {
+            id: "Web Development",
+            value: 60
         },
     ];
 
     comfortable_techs = [
-        "C",
-        "Java",
+        "Python",
+        "Pytorch",
+        "Numpy",
+        "IBM Spectrum LSF",
         "Git",
-        "Google Cloud App Engine",
-        "Unity",
+        "Conda",
         "Linux",
-        "JavaScript",
-        "HTML",
         "Docker",
-        "SCSS",
+        "Jenkins",
     ];
     
     other_techs = [
+        "C",
+        "Java",
+        "Google Cloud App Engine",
+        "Unity",
+        "JavaScript",
+        "HTML",
+        "SCSS",
         "TypeScript",
         "React",
         "NodeJS",
         "C++",
-        "GLSL",
         "Bootstrap",
-        "Python",
         "PHP",
-        "Laravel",
         "SQLite",
         "Dart",
-        "Assembly",
         "MongoDB",
         "C#",
         "OpenGL",
         "Flutter",
-        "Prolog",
-        "Alloy",
         "CSS",
-        "Scikit-learn",
-        "EJS",
-        "Dafny",
     ];
 
     render() {
@@ -129,7 +126,7 @@ class Skills extends Component {
                     </div>
                     <div className="bottom text-center w-100">
                     <div className="mt-5">
-                            <h4>Even though I have <strong>not found my niche yet</strong>, here are some technologies <strong>I feel comfortable with:</strong></h4>
+                            <h4>In my niche of <strong>AI</strong>, I have been <strong>using these technologies the most:</strong></h4>
                             <ul className="list-group list-group-horizontal row d-flex justify-content-center confortable-list">
                                 {this.comfortable_techs.map((entry, index) => (
                                     <li key={index} className="list-group-item">{entry}</li>
