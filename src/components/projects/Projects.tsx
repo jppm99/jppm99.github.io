@@ -6,6 +6,7 @@ import './Projects.css';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 
+import theia_project from "../../assets/theia-project.png";
 import ldso from "../../assets/ldso.jpg";
 import personalWebsite from "../../assets/personalWebsite.jpg";
 import ai from "../../assets/iart.jpg";
@@ -14,6 +15,26 @@ import fileTransfer from "../../assets/fileTransfer.jpg";
 import lostForest from "../../assets/lostForest.jpg";
 
 const projects = [
+    {
+        image_path: theia_project,
+        title: "THEIA Project",
+        description: `
+                The THEIA (innovation) project, a partnership between Bosch and the
+                University of Porto, aims to enhance the sensory capabilities of
+                autonomous vehicles.
+            `,
+        redirect: "https://www.bosch.pt/a-nossa-empresa/bosch-em-portugal/projetos-de-inovacao-e-id-t/theia/",
+        technologies: [
+            "fab fa-python",
+            "fa-solid fa-server",
+            "fa-solid fa-camera",
+            "fab fa-git",
+            "fab fa-linux",
+            "fab fa-docker",
+            "fa-solid fa-car",
+            "fab fa-jenkins"
+        ]
+    },
     {
         image_path: hyperCasual,
         title: "Hyper-casual mobile game",
